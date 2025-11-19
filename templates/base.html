@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- padrão que aceita diacriticos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Padrão para sites responsividade-->
+    <title>{% block title %} ToDo Django {% endblock %} </title> <!-- No django, a escrita, apara que funcione é diferente do html comum, então haverá laguns comando internos a mais.-->
+</head> 
+
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}"> Início</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}
+
+        <!-- aqui é onde a mágica acontece!-->
+
+        {% endblock %}
+    </main>
+    
+</body>
+</html>

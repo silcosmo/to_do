@@ -21,6 +21,6 @@ from main.views import HomeView #importndo de onde criei
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main/', include('main.urls')),
+    path('main/', include('main.urls')), #sinalizzer que o meu app existe um arquivo urls
     path('', HomeView.as_view(), name='home')
 ]
