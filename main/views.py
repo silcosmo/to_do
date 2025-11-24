@@ -19,3 +19,19 @@ def task_list(request):
         "titulos_pagina": 'Minhas Tarefas'
     }
     return render(request, 'tasks/task_list.html', context)
+
+def task_concluido(request):
+    a=4
+    b=5
+    c= a+b
+
+    tarefas =Task.objects.filter(concluida=1)
+    context = {
+        "tarefas":tarefas,
+        "titulo_pagina": "Minhas Tarefas Concluidas",
+        'c':c    
+        }
+    return render(request, 'tasks/concluidas.html', context)
+
+
+  

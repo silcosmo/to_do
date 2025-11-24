@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block title %}Minhas Tarefas{% endblock %}
+
+{%block content %}
+
+<h1>Tarefas</h1>
+<br>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Prioridade</th>
+      <th scope="col">Iniciado em </th>
+      <th scope="col">Data limite</th>
+      <th scope="col"> Última atualização </th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for task in tarefas %}
+    <tr>
+
+      <td>{{ task.id }}</td>
+      <td>{{ task.titulo }}</td>
+      <td>{{ task.descricao }}</td>
+      <td>{{ task.prioridade}}</td>
+      <td>{{ task.criado_em}}</td>
+      <td>{{ task.data_limite}}</td>
+      <td>{{ task.atualizado_em}}</td>
+
+    </tr>
+
+    {%endfor%}
+
+  </tbody>
+</table>
+
+    O resultado é {{c}}
+
+{%endblock %}
